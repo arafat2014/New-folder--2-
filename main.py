@@ -1,1 +1,1 @@
-print("Hallow word")
+print(66)
