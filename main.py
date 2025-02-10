@@ -1,9 +1,5 @@
-import os
-
-files = os.listdir("clutteredFolder")
-i = 1
-for file in files:
-    if file.endswith(".png"):
-        print(file)
-        os.rename(f"clutteredFolder/{file}", f"clutteredFolder/{i}.png")
-        i += 1 
+x = [1, 2, 3]
+print(dir(x))
+print(x.__add__)
+print(x.__class__)
+print(x.__class_getitem__)
