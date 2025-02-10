@@ -3,9 +3,9 @@ class Person:
         self.name = name
         self.age = age
         
-    def showDetails(self):
+    def show_Details(self):
         print(f"The name of student is {self.name} and the age of the student is {self.age} ")
 
 p = Person("Arafat" , 25)
-p.showDetails()
+p.show_Details()
 print(p.__dict__)
