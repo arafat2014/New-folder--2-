@@ -1,5 +1,9 @@
-x = [1, 2, 3]
-print(dir(x))
-print(x.__add__)
-print(x.__class__)
-print(x.__class_getitem__)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    
+
+p = Person("Arafat" , 25)
+print(p.__dict__)
