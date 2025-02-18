@@ -1,20 +1,24 @@
-class Animal:
-    def __init__(self, name, species):
-        self.species = species
+class Employee:
+    def __init__(self, name):
+        self.name = name  
         
-    def make_sound(self):
-        print("Sound made by the animal")
+    def show(self):
+        print(f"The name is {self.name}")      
+class Dancer:
+    def __init__(self, name):
+        self.name = name
         
-class Dog(Animal):
-    def __init__(self, name, breed):
-        Animal.__init__(self, name, species = "Dog")
-        self.breed = breed       
-    def make_sound(self):
-            print("Bark!")
-            
-d = Dog("Dog", "Doggerman")
-d.make_sound()
+    def show(self):
+        print(f"The Dance is {self.name}")    
+class DancerEmploy(Employee , Dancer):
+    def __init__(self, name, dance):
+        self.name = name
+        self.dance = dance
+        
+o = DancerEmploy("Arafat", "Kathak")
+print(o.name)
+print(o.dance)
+o.show()
+print(DancerEmploy.mro())
 
-a = Animal("Dog", "Cat")
-a.make_sound()
-        
+    
