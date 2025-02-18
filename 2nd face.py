@@ -1,9 +1,11 @@
-class Person:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        self.Value = 1
-        
-P = Person("Arafat", 15)
-print(P.__dict__)
-print(help(Person))
+class Employ:
+    name = "Arafat"
+    def __len__(self):
+        i = 0
+        for c in self.name:
+            i = i+1
+        return i
+    
+e = Employ()
+print(e.name)
+print(len(e))
