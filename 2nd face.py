@@ -1,20 +1,20 @@
-class Vector:
-    def __init__(self, i, j, k):
-        self.i = i
-        self.j = j
-        self.k = k
-    
-    def __str__ (self):
-        return f"{self.i} i + {self.j} j + {self.k} k"
-    
-    def __add__ (self, x):
-        return f"{self.i + x.i} i + {self.j +x.j} j + {self.k + x.k} k"
-    
-v1 = Vector(3, 5, 7)
-print(v1)
+class Animal:
+    def __init__(self, name, species):
+        self.species = species
+        
+    def make_sound(self):
+        print("Sound made by the animal")
+        
+class Dog(Animal):
+    def __init__(self, name, breed):
+        Animal.__init__(self, name, species = "Dog")
+        self.breed = breed       
+    def make_sound(self):
+            print("Bark!")
+            
+d = Dog("Dog", "Doggerman")
+d.make_sound()
 
-v2 = Vector(1, 3, 7)
-print(v2)
-
-print (v1 + v2)
-
+a = Animal("Dog", "Cat")
+a.make_sound()
+        
